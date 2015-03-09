@@ -7,7 +7,7 @@ from .reporting import *
 
 def register():
     Pool.register(
-        PosDevice,
+        SaleDevice,
         module='sale_pos_esc', type_='model')
     Pool.register(
         Receipt,

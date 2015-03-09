@@ -7,12 +7,12 @@ from trytond.model import ModelView, fields
 from trytond.pool import Pool, PoolMeta
 from trytond.rpc import RPC
 
-__all__ = ['PosDevice']
+__all__ = ['SaleDevice']
 __metaclass__ = PoolMeta
 
 
-class PosDevice:
-    __name__ = 'sale_pos.device'
+class SaleDevice:
+    __name__ = 'sale.device'
     printer_port = fields.Char(string='Printer Port', help='Port type the '
             'receipt printer is conntected to.')
     display_port = fields.Char('Display port', help='Like /dev/ttyS0')
@@ -22,7 +22,7 @@ class PosDevice:
 
     @classmethod
     def __setup__(cls):
-        super(PosDevice, cls).__setup__()
+        super(SaleDevice, cls).__setup__()
         cls.__rpc__.update({
                 'test_printer': RPC(instantiate=0),
                 'test_display': RPC(instantiate=0),

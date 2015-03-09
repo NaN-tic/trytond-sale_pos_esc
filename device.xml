@@ -3,16 +3,15 @@
       copyright notices and license terms. -->
 <tryton>
     <data>
-        <record model="ir.ui.view" id="pos_device_form">
-            <field name="model">sale_pos.device</field>
-            <field name="inherit" ref="sale_pos.pos_device_form"/>
-            <field name="name">pos_device_form</field>
+        <record model="ir.ui.view" id="sale_device_form">
+            <field name="model">sale.device</field>
+            <field name="inherit" ref="sale_payment.sale_device_form_view"/>
+            <field name="name">sale_device_form</field>
         </record>
-        <record model="ir.ui.view" id="pos_device_tree">
-            <field name="model">sale_pos.device</field>
-            <field name="inherit" ref="sale_pos.pos_device_tree"/>
-            <field name="name">pos_device_tree</field>
+        <record model="ir.ui.view" id="sale_device_tree">
+            <field name="model">sale.device</field>
+            <field name="inherit" ref="sale_payment.sale_device_tree_view"/>
+            <field name="name">sale_device_tree</field>
         </record>
-
     </data>
 </tryton>
